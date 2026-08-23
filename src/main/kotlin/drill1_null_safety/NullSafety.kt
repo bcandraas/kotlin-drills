@@ -1,3 +1,5 @@
+package drill1_null_safety
+
 fun main(){
     val a: String? = "Kotlin"
     val b: String? = null

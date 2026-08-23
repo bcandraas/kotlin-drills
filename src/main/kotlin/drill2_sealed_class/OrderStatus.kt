@@ -1,3 +1,5 @@
+package drill2_sealed_class
+
 sealed class OrderStatus {
     object Placed : OrderStatus()
     data class Shipped (val trackingNumber: String?, val estimatedDays: Int) : OrderStatus()

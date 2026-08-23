@@ -1,3 +1,5 @@
+package drill2_sealed_class
+
 sealed class ErrorType{
     data class InsufficientFunds(val shortfall: Double) : ErrorType()
     object NetworkError : ErrorType()
@@ -11,7 +13,7 @@ sealed class PaymentStatus{
     data class Failed(val error: ErrorType) : PaymentStatus()
 }
 
-fun getPaymentStatus(): PaymentStatus{
+fun getPaymentStatus(): PaymentStatus {
     return when ((0..3).random()){
         0 -> PaymentStatus.Idle
         1 -> PaymentStatus.Processing((100..1000).random().toDouble())
