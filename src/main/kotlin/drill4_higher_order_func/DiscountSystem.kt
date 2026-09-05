@@ -14,6 +14,10 @@ fun main() {
     // Lambda 2: Flat $15 coupon
     val couponPrice = calculateFinalPrice(originalPrice) { price -> price - 15.0 }
 
+    val discountCoupon = calculateFinalPrice(originalPrice) { price -> ( price * 0.90 ) - 5.0 }
+
     println("Sale Price: $$salePrice")     // Output: Sale Price: $80.0
     println("Coupon Price: $$couponPrice") // Output: Coupon Price: $85.0
+    println("Discount and Coupon Price: $$discountCoupon") // Output: Coupon Price: $85.0
+
 }
